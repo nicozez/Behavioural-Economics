@@ -13,12 +13,12 @@ from scipy.stats import norm
 #Definition of Options Class
 class Option: 
     def __init__(
-        self,
-        Volatility: float,
-        StockPrice: float,
-        StrikePrice: float,
-        TimeToMaturity: float,
-        InterestRate: float
+        self,  #all parameters should be floats 
+        Volatility,
+        StockPrice,
+        StrikePrice,
+        TimeToMaturity,
+        InterestRate
     ):
         self.Volatility = Volatility
         self.StockPrice = StockPrice
@@ -35,6 +35,11 @@ class Option:
 
 option = Option(Volatility=0.2, StockPrice=100, StrikePrice=105, TimeToMaturity=1, InterestRate=0.05)
 call, put = option.run()
-
 print(f"Call Option Price: {call}")
 print(f"Put Option Price: {put}")
+
+
+
+
+
+
